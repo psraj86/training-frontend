@@ -1,0 +1,44 @@
+<h1 mat-dialog-title>{{titleText}}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="companyForm">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" formControlName="name" placeholder="Name">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="maxUser">Max User</label>
+          <input type="number" class="form-control" id="maxUser" formControlName="maxUser" placeholder="Max User">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="isDCRProgressive">Is DCR Progressive?</label>
+          <input type="checkbox" class="form-control" id="isDCRProgressive" formControlName="isDCRProgressive"
+            placeholder="Is DCR Progressive?">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="isDivisionExist">Is Division Exists</label>
+          <input type="checkbox" class="form-control" id="isDivisionExist" formControlName="isDivisionExist"
+            placeholder="Is Division Exists?">
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="close()" cdkFocusInitial color="primary">{{btnText}}</button>
+</div>
