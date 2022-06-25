@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Create Area Form </h1>
+
+<hr />
+<div mat-dialog-content>
+  {{areaForm.value | json}}
+  <form [formGroup]="areaForm">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" formControlName="name" class="form-control" id="name" placeholder="Area Name">
+    </div>
+    <div class="mb-3">
+      <label for="code" class="form-label">Code</label>
+      <input type="text" formControlName="code" class="form-control" id="code" placeholder="Area Code">
+    </div>
+    <div class="mb-3">
+      <select class="form-select" formControlName="status" aria-label="Status">
+        <option selected>Select Status</option>
+        <option value="true">Active</option>
+        <option value="false">InActive</option>
+      </select>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="closeDialog()" cdkFocusInitial>Add Area</button>
+</div>

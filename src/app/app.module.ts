@@ -15,12 +15,19 @@ import { CompanyFormComponent } from './components/company-form/company-form.com
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+
+import { AreaComponent } from './components/area/area.component';
+import { AreaFormComponent } from './components/area/area-form/area-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompanyComponent,
-    CompanyFormComponent
+    CompanyFormComponent,
+    AreaComponent,
+    AreaFormComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,8 @@ import { MatIconModule } from '@angular/material/icon';
     ReactiveFormsModule,
     MatDialogModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AddHeaderInterceptor, multi: true },
